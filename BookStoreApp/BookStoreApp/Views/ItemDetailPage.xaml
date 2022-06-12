@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BookStoreApp.Views.ItemDetailPage"
+             Title="{Binding Title}">
+
+    <StackLayout Spacing="20" Padding="15">
+        <Label Text="Name:" FontSize="Medium" />
+        <Entry Text="{Binding Name, Mode=TwoWay}" FontSize="Small"/>
+        <Label Text="Price:" FontSize="Medium" />
+        <Entry Text="{Binding Price, Mode=TwoWay}" FontSize="Small"/>
+        <Label Text="Category:" FontSize="Medium" />
+        <Entry Text="{Binding Category, Mode=TwoWay}" FontSize="Small"/>
+        <Label Text="Author:" FontSize="Medium" />
+        <Entry Text="{Binding Author, Mode=TwoWay}" FontSize="Small"/>
+        <Button Text="Update"
+                Command="{Binding UpdateCommand}"/>
+        <Button Text="Delete"
+                Command="{Binding DeleteCommand}"/>
+    </StackLayout>
+    
+</ContentPage>
